@@ -6,8 +6,8 @@ from sklearn.preprocessing import StandardScaler
 import joblib
 
 
-df = pd.read_csv(r'C:\Users\engmi\Desktop\Data Science\data_science_diploma\Machine Learning Course\interactive\Model Selection\bike_sharing_daily\bike_sharing_daily.csv')
-bike_sharing_daily_model = joblib.load(r'C:\Users\engmi\Desktop\Data Science\data_science_diploma\Machine Learning Course\interactive\Model Selection\bike_sharing_daily\bike_sharing_daily_model.p')
+df = pd.read_csv('bike_sharing_daily.csv')
+bike_sharing_daily_model = joblib.load('bike_sharing_daily_model.p')
 sc = StandardScaler()
 
 # page title
