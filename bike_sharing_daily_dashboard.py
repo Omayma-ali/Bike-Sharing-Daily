@@ -32,19 +32,16 @@ with col1:
     WorkingDay= st.radio("IS WorkingDay?", options=['Weekend or Holiday', 'Workday'])
     WorkingDay = {'Weekend or Holiday': 0, 'Workday': 1}.get(WorkingDay, WorkingDay)
 
-
-
-
-
-
 with col2:
 
     Holiday= st.radio("IS Holiday?", options=['Holiday', 'Not Holiday'])
     Holiday = {'Holiday': 1, 'Not Holiday': 0}.get(Holiday, Holiday)
-    
+   
+    # Temperature = (t-t_min)/(t_max-t_min)   , t_min=-8, t_max=+39
     Temperature = (st.number_input("Temperature", step=1.0) + 8) / (39 + 8)
+    #  The values are divided to 100
     Humidity = st.number_input("Humidity", step=1.0)/100
-
+    # The values are divided to 67
     Wind_Speed = st.number_input("Wind Speed", step=1.0)/67
     
     Casual = st.number_input("Casual", step=1.0)
